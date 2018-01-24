@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class URLForm extends React.Component {
+class URLForm extends Component {
   constructor() {
     super();
     this.state = {

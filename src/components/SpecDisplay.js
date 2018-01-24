@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class SpecDisplay extends React.Component {
+class SpecDisplay extends Component {
   constructor() {
     super();
     this.state = {};
