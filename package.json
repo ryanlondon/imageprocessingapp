@@ -31,6 +31,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "systeminformation": "^3.33.12",
+    "woven-js": "^0.3.6",
     "ws": "^4.0.0"
   },
   "devDependencies": {
@@ -44,6 +45,7 @@
     "serviceworker-webpack-plugin": "^0.2.3",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
-    "worker-loader": "^1.1.0"
+    "worker-loader": "^1.1.0",
+    "woven-loader": "^1.0.3"
   }
 }
