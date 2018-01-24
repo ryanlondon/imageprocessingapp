@@ -15,16 +15,17 @@ module.exports = {
       },
       { 
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /woven_functions/],
         loader: "babel-loader",
       },
       {
-        test: /\.svg$/, loader: 'file-loader',
+        test: /\.svg$/, 
+        use: { loader: 'file-loader', options: { name: '[name].[ext]' }},
       },
-      {
-        test: /\.worker\.js$/,
-        use: { loader: 'worker-loader' },
-      },
+      // {
+      //   test: /\.worker\.js$/,
+      //   use: { loader: 'worker-loader', options: { inline: true, fallback: false } },
+      // },
     ]
   },
   plugins: [
