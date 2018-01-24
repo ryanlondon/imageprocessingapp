@@ -28,13 +28,13 @@ const processImage = (req, res) => {
 
   const imageDataObj = context.getImageData(0, 0, img.width, img.height);
 
-  processSepia(imageDataObj.data, img.width * img.height * 4);
+  processSepia(imageDataObj.data, imageDataObj.length);
 
   context.putImageData(imageDataObj, 0, 0);
 
   const newURL = canvas.toDataURL('image/png');
 
   res.json({ _id: req.body._id, url: newURL });
-}
+};
 
 module.exports = { addImage, getImages, processImage, }
