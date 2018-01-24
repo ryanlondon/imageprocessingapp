@@ -3,8 +3,8 @@ import { render } from 'react-dom';
 import App from './components/App';
 import styles from './css/style.css';
 import runtime from 'serviceworker-webpack-plugin/lib/runtime';
-import Worker from 'worker-loader!../workers/webWorker.js';
-import sepiaWorker from 'worker-loader!../workers/sepiaWorker.js';
+// import Worker from 'worker-loader!../workers/webWorker.js';
+// import sepiaWorker from 'worker-loader!../workers/sepiaWorker.js';
 
 render(<App />, document.getElementById('root'));
 
