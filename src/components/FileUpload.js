@@ -5,7 +5,6 @@ class FileUpload extends Component {
     super();
     this.state = {
       files: [],
-      localFileID: 0
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,7 +19,6 @@ class FileUpload extends Component {
     const reader = new FileReader();
     reader.onload = (event) => {
       this.props.addImage(event.target.result);
-      // this.setState({ localFileID: ++this.state.localFileID })
     };
     reader.readAsDataURL(this.state.files[0]);
   }

@@ -28,7 +28,7 @@ const processImage = (req, res) => {
 
   const imageDataObj = context.getImageData(0, 0, img.width, img.height);
 
-  processSepia(imageDataObj.data, imageDataObj.length);
+  processSepia(imageDataObj.data, img.width * img.height * 4);
 
   context.putImageData(imageDataObj, 0, 0);
 

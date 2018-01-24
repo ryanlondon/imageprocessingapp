@@ -22,16 +22,6 @@ module.exports = {
         test: /\.svg$/, 
         use: { loader: 'file-loader', options: { name: '[name].[ext]' }},
       },
-      // {
-      //   test: /\.worker\.js$/,
-      //   use: { loader: 'worker-loader', options: { inline: true, fallback: false } },
-      // },
     ]
   },
-  plugins: [
-    new ServiceWorkerWebpackPlugin({
-      entry: path.join(__dirname, 'workers/serviceWorker.js'),
-      filename: 'serviceWorker.js',
-    }),
-  ],
 };
