@@ -3,6 +3,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const WebSocket = require('ws');
+const woven = require('woven-js');
+const functions = require('../woven_functions/functions')
+
+woven.configure(functions, { alwaysServer: true });
 
 
 //-- WEBSOCKET -----------------------------------------------------//
@@ -30,6 +34,7 @@ const app = express();
 app.use(express.static(__dirname + '/../build/')); // do we need this? all static files should be bundled
 app.use(bodyParser.json({ limit: '16mb' }));
 app.use(bodyParser.urlencoded({ limit: '16mb', extended: true }));
+app.use(woven.optimize);
 
 app.get('/read', imageController.getImages);
 app.post('/create', imageController.addImage);
